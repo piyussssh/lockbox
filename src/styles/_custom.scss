@@ -34,4 +34,8 @@
             background: rgba(255, 255, 255, 0.2);
         }
     }
+    &.btn-icon{
+        @apply p-2 rounded;
+        @include fit-height;
+    }
 }

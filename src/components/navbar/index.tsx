@@ -5,7 +5,7 @@ export default function Navbar() {
     return (
         <>
             <div className="bg-base-100">
-                <div className="container py-2 flex items-center justify-between">
+                <div className="container py-4 flex items-center justify-between">
                     <div>
                         <Image
                             src={'/assets/brand/lockbox.svg'}

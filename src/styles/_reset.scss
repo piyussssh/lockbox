@@ -1,0 +1,4 @@
+:root:has(:is(.modal-open, .modal:target, .modal-toggle:checked + .modal, .modal[open])) {
+    overflow: hidden;
+    scrollbar-gutter: auto !important;
+  }
