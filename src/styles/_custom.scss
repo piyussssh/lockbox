@@ -1,0 +1,37 @@
+@mixin media-query($breakpoints...) {
+    @each $width in $breakpoints {
+        @media (min-width: $width) {
+            max-width: calc(#{$width} - 40px) !important;
+        }
+    }
+}
+
+@mixin fit-height {
+    height: fit-content;
+    width: fit-content;
+    min-height: fit-content;
+}
+
+.container {
+    @include media-query(420px, 640px, 768px, 1024px, 1280px, 1440px, 1536px);
+    @apply mx-auto px-2;
+}
+
+.bg-secaondary{
+
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.btn {
+    font-size: 14px;
+    &.btn-secondary {
+        @include fit-height;
+        border-radius: 2px;
+        background: rgba(255, 255, 255, 0.05);
+
+        @apply text-white border-none px-6 py-4;
+        &:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    }
+}
